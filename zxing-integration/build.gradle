@@ -30,3 +30,15 @@ android {
         versionName '1.0'
     }
 }
+
+task publishToLocal(type: Exec, dependsOn: [clean, assemble]) {  
+  commandLine 'mvn', 'install:install-file', '-Dfile=build/libs/zxing-integration.aar',  '-DgroupId=me.dm7.zxing.android', '-DartifactId=zxing-integration', '-Dversion=1.0', '-Dpackaging=aar'
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+    return standardOutput.toString()
+  }
+}

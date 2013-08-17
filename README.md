@@ -1,5 +1,22 @@
 This is an Android library project that simplifies the integration with zxing (https://code.google.com/p/zxing/).
 
+### How to install?
+
+#### With Gradle
+
+1.) Clone this repo
+2.) You can use either approaches 1 or 2 below:
+
+#### Approach 1 (Folder Reference): 
+
+Add a reference to the folder in your build.gradle file. More info here: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Referencing-a-Library
+
+#### Approach 2 (Install to local maven repository): 
+
+a.) Go to the zxing-integration sub-folder
+b.) Make sure maven is installed
+c.) gradle publishToLocal
+
 ### How to use?
 
 1. Download this project and add it as a library project to your existing Android app.
@@ -10,7 +27,7 @@ This is an Android library project that simplifies the integration with zxing (h
 </pre>
 3. Within the application element, add the activity declartion:
 <pre>
-&lt;activity android:name="com.dm.zxing.android.ZXingScannerActivity"`
+&lt;activity android:name="me.dm7.zxing.android.ZXingScannerActivity"`
             android:screenOrientation="landscape"
             android:label="@string/app_name" /&gt;
 </pre>
