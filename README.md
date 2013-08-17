@@ -4,18 +4,18 @@ This is an Android library project that simplifies the integration with zxing (h
 
 #### With Gradle
 
-1.) Clone this repo
-2.) You can use either approaches 1 or 2 below:
+Clone this repo and you can use either approaches 1 or 2 below:
 
 #### Approach 1 (Folder Reference): 
 
 Add a reference to the folder in your build.gradle file. More info here: http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Referencing-a-Library
 
+
 #### Approach 2 (Install to local maven repository): 
 
-a.) Go to the zxing-integration sub-folder
-b.) Make sure maven is installed
-c.) gradle publishToLocal
+a. Go to the zxing-integration sub-folder
+b. Make sure maven is installed
+c. gradle publishToLocal
 
 ### How to use?
 
