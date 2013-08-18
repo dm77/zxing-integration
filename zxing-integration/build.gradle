@@ -31,7 +31,7 @@ android {
     }
 }
 
-task publishToLocal(type: Exec, dependsOn: [clean, assemble]) {  
+task publishToLocal(type: Exec) {  
   commandLine 'mvn', 'install:install-file', '-Dfile=build/libs/zxing-integration.aar',  '-DgroupId=me.dm7.zxing.android', '-DartifactId=zxing-integration', '-Dversion=1.0', '-Dpackaging=aar'
 
   //store the output instead of printing to the console:
