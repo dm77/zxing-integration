@@ -15,7 +15,9 @@ Add a reference to the folder in your build.gradle file. More info here: http://
 
 * Go to the zxing-integration sub-folder
 * Make sure maven is installed
-* From command line, run the command: gradle publishToLocal
+* From command line, run the commands: 
+gradle assemble
+gradle publishToLocal
 
 ### How to use?
 
