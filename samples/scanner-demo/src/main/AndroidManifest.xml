@@ -16,8 +16,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="me.dm7.zxing.android.ZXingScannerActivity"
-                  android:screenOrientation="landscape"
-                  android:label="@string/app_name" />
+        <activity
+            android:name="me.dm7.zxing.android.ZXingScannerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
     </application>
 </manifest>
