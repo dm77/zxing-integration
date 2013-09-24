@@ -84,6 +84,8 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
             rawResult = mMultiFormatReader.decodeWithState(bitmap);
         } catch (ReaderException re) {
             // continue
+        } catch (NullPointerException npe) {
+            // This is terrible
         } finally {
             mMultiFormatReader.reset();
         }
