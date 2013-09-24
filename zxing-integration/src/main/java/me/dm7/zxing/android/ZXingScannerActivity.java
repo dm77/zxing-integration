@@ -24,11 +24,7 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Hide the window title.
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        super.onCreate(savedInstanceState);        
 
         mAutoFocusHandler = new Handler();
         initMultiFormatReader();

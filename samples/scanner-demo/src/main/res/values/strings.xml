@@ -3,4 +3,5 @@
     <string name="app_name">ZXing Scanner Demo</string>
     <string name="scan">Scan</string>
     <string name="scan_only_qr_codes">Scan only QR Codes</string>
+    <string name="scanner_activity_title">Scan a Barcode or QR Code</string>
 </resources>

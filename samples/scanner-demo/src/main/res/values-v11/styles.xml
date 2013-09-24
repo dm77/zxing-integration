@@ -1,0 +1,5 @@
+<resources>
+    <style name="OverlayActionBarTheme" parent="@android:style/Theme.Holo">
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+</resources>

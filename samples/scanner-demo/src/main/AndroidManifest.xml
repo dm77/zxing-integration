@@ -19,6 +19,7 @@
         <activity
             android:name="me.dm7.zxing.android.ZXingScannerActivity"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+            android:label="@string/scanner_activity_title"
+            android:theme="@style/OverlayActionBarTheme" />
     </application>
 </manifest>
