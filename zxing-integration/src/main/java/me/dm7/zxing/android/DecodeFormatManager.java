@@ -29,7 +29,8 @@ final class DecodeFormatManager {
                                  BarcodeFormat.ITF,
                                  BarcodeFormat.CODABAR,
                                  BarcodeFormat.QR_CODE,
-                                 BarcodeFormat.DATA_MATRIX);
+                                 BarcodeFormat.DATA_MATRIX,
+                                 BarcodeFormat.PDF_417);
     }
 
     private DecodeFormatManager() {}
