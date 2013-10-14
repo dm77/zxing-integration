@@ -17,9 +17,9 @@ version = "1.0"
 packaging = "aar"
  
 uploadArchives {
-  repositories.mavenDeployer {
-      repository(url: "file:///" + new File("src/repo").getAbsolutePath())
-  }
+    repositories.mavenDeployer {
+        repository(url: "file:///" + new File("src/repo").getAbsolutePath())
+    }
 }
 
 repositories {
