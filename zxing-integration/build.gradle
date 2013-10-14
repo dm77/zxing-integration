@@ -10,6 +10,17 @@ buildscript {
     }
 }
 apply plugin: 'android-library'
+apply plugin: 'maven'
+
+group = "me.dm7.zxing.android"
+version = "1.0"
+packaging = "aar"
+ 
+uploadArchives {
+  repositories.mavenDeployer {
+      repository(url: "file:///" + new File("src/repo").getAbsolutePath())
+  }
+}
 
 repositories {
     mavenCentral()

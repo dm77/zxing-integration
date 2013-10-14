@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>me.dm7.zxing.android</groupId>
+  <artifactId>zxing-integration</artifactId>
+  <version>1.0</version>
+  <versioning>
+    <versions>
+      <version>1.0</version>
+    </versions>
+    <lastUpdated>20131014204322</lastUpdated>
+  </versioning>
+</metadata>
