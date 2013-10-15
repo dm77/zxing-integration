@@ -12,14 +12,24 @@ buildscript {
 apply plugin: 'android-library'
 apply plugin: 'maven'
 
-group = "me.dm7.zxing.android"
-version = "1.0"
-packaging = "aar"
+group = 'me.dm7.zxing.android'
+version = '1.0'
  
-uploadArchives {
-    repositories.mavenDeployer {
-        repository(url: "file:///" + new File("src/repo").getAbsolutePath())
-    }
+uploadArchives {                                                                
+    repositories.mavenDeployer {                                                
+        repository(url: "http://nexus.dm7.me:8081/nexus/content/repositories/releases") {
+            authentication(userName: nexusUserName , password: nexusPassword)
+            releases(updatePolicy: 'always')
+        }
+
+        snapshotRepository(url: "http://nexus.dm7.me:8081/nexus/content/repositories/snapshots") {
+            authentication(userName: nexusUserName , password: nexusPassword)
+            snapshots(updatePolicy: 'always')
+        }
+
+        pom.packaging = 'aar'
+        pom.artifactId = 'zxing-integration'
+    }                                                                           
 }
 
 repositories {
@@ -43,13 +53,17 @@ android {
 }
 
 task publishToLocal(type: Exec) {  
-  commandLine 'mvn', 'install:install-file', '-Dfile=build/libs/zxing-integration.aar',  '-DgroupId=me.dm7.zxing.android', '-DartifactId=zxing-integration', '-Dversion=1.0', '-Dpackaging=aar'
+    commandLine 'mvn', 'install:install-file', '-Dfile=build/libs/zxing-integration.aar',  '-DgroupId=me.dm7.zxing.android', '-DartifactId=zxing-integration', '-Dversion=1.0', '-Dpackaging=aar'
 
-  //store the output instead of printing to the console:
-  standardOutput = new ByteArrayOutputStream()
+    //store the output instead of printing to the console:
+    standardOutput = new ByteArrayOutputStream()
 
-  //extension method stopTomcat.output() can be used to obtain the output:
-  ext.output = {
-    return standardOutput.toString()
-  }
+    //extension method stopTomcat.output() can be used to obtain the output:
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
 }
