@@ -12,9 +12,6 @@ buildscript {
 apply plugin: 'android-library'
 apply plugin: 'maven'
 
-group = 'me.dm7.zxing.android'
-version = '1.0'
- 
 uploadArchives {                                                                
     repositories.mavenDeployer {                                                
         repository(url: "http://nexus.dm7.me:8081/nexus/content/repositories/releases") {
@@ -27,8 +24,10 @@ uploadArchives {
             snapshots(updatePolicy: 'always')
         }
 
-        pom.packaging = 'aar'
         pom.artifactId = 'zxing-integration'
+        pom.groupId = 'me.dm7.zxing.android'
+        pom.version = '1.0'
+        pom.packaging = 'aar'
     }                                                                           
 }
 
