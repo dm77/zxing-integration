@@ -14,12 +14,12 @@ apply plugin: 'maven'
 
 uploadArchives {                                                                
     repositories.mavenDeployer {                                                
-        repository(url: "http://nexus.dm7.me:8081/nexus/content/repositories/releases") {
+        repository(url: "http://nexus.dm7.me/content/repositories/releases") {
             authentication(userName: nexusUserName , password: nexusPassword)
             releases(updatePolicy: 'always')
         }
 
-        snapshotRepository(url: "http://nexus.dm7.me:8081/nexus/content/repositories/snapshots") {
+        snapshotRepository(url: "http://nexus.dm7.me/content/repositories/snapshots") {
             authentication(userName: nexusUserName , password: nexusPassword)
             snapshots(updatePolicy: 'always')
         }
