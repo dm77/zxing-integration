@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.android.tools.build:gradle:0.7.+'
     }
 }
 apply plugin: 'android-library'
@@ -26,7 +26,7 @@ uploadArchives {
 
         pom.artifactId = 'zxing-integration'
         pom.groupId = 'me.dm7.zxing.android'
-        pom.version = '1.0'
+        pom.version = '1.2-SNAPSHOT'
         pom.packaging = 'aar'
     }                                                                           
 }
@@ -40,8 +40,8 @@ dependencies {
 }
  
 android {
-    compileSdkVersion 18
-    buildToolsVersion "18.1.1"
+    compileSdkVersion 19
+    buildToolsVersion "19"
  
     defaultConfig {
         minSdkVersion 8
@@ -64,5 +64,5 @@ task publishToLocal(type: Exec) {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.8'
+    gradleVersion = '1.9'
 }

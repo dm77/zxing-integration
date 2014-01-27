@@ -156,7 +156,7 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
         requestLayout();
 
         mCamera.setParameters(parameters);
-        mCamera.setPreviewCallback(mPreviewCallback);
+        mCamera.setOneShotPreviewCallback(mPreviewCallback);
         mCamera.startPreview();
         mCamera.autoFocus(mAutoFocusCallback);
     }

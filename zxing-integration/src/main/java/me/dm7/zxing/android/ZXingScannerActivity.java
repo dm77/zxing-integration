@@ -24,7 +24,7 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);        
+        super.onCreate(savedInstanceState);
 
         mAutoFocusHandler = new Handler();
         initMultiFormatReader();
@@ -61,7 +61,7 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
         if (mCamera != null) {
             mPreview.setCamera(null);
             mCamera.cancelAutoFocus();
-            mCamera.setPreviewCallback(null);
+            mCamera.setOneShotPreviewCallback(null);
             mCamera.stopPreview();
             mCamera.release();
             mCamera = null;
@@ -88,7 +88,7 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
 
         if (rawResult != null) {
             mCamera.cancelAutoFocus();
-            mCamera.setPreviewCallback(null);
+            mCamera.setOneShotPreviewCallback(null);
             mCamera.stopPreview();
             mPreviewing = false;
 
@@ -97,6 +97,8 @@ public class ZXingScannerActivity extends Activity implements Camera.PreviewCall
             dataIntent.putExtra(SCAN_RESULT_FORMAT, rawResult.getBarcodeFormat().toString());
             setResult(Activity.RESULT_OK, dataIntent);
             finish();
+        } else {
+            mCamera.setOneShotPreviewCallback(this);
         }
     }
     private Runnable doAutoFocus = new Runnable() {
