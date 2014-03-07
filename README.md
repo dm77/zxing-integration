@@ -1,3 +1,10 @@
+ATTENTION!
+==========
+
+This project will no longer be maintained. Moving forward, I am going to spend my time on development of this project here: https://github.com/dm77/barcodescanner
+
+-------------------------------------------------------------------------------------
+
 This is an Android library project that simplifies the integration with zxing (https://code.google.com/p/zxing/).
 
 ### How to install?
@@ -108,6 +115,11 @@ Almost all of the code for this library project has been taken from these two pl
 ### License
 MIT
 
+-----------------------------------------------------------------
 
+ATTENTION!
+==========
+
+This project will no longer be maintained. Moving forward, I am going to spend my time on development of this project here: https://github.com/dm77/barcodescanner
 
 
